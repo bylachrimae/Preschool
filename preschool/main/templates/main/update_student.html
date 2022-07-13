@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	<div class="container shadow p-4 mb-5 bg-body rounded">
+		<h1>Update Student/Child</h1>
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{% for field in form %}
+				{{field.tag}}
+				<br>
+				{{field}}
+			{% endfor %}
+			<br>
+			<br>
+			<button type="submit" class="btn btn-secondary btn-sm">Update</button>
+		</form>
+	</div>
+{% endblock %}

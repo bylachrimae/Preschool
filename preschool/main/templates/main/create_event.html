@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	<div class="container">
+		<h1>Create School Event</h1>
+		<br>
+		{% if submitted %}
+			<p>This event is created!</p>
+		{% else %}
+			<form method="POST">
+				{% csrf_token %}
+				{{form.as_p}}
+				<button type="submit" value="Submit" class="btn btn-outline-secondary btn-sm">Submit</button>
+			</form>
+		{% endif %}
+	</div>
+{% endblock %}

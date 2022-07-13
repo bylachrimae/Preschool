@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	<div class="container">
+		<form action="" method="POST">
+			{% csrf_token %}
+			<div class="card">
+			  <div class="card-header">
+			    Acoount List
+			  </div>
+			</div>
+			<br>
+			<h2>Teacher Approval</h2>
+			<br>
+			<table class="table table-striped table-hover table-bordered">
+			  <thead>
+			    <tr>
+			      <th scope="col">First Name</th>
+			      <th scope="col">Last Name</th>
+			      <th scope="col">Approved</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	{% for account in account_list %}
+			  		<tr>
+			  			<td>
+			  				{{account.first_name}}<br>
+			  			</td>
+			  			<td>
+			  				{{account.last_name}}<br>
+			  			</td>
+			  			<td>
+			  				{% if account.is_teacher %}
+			  					<div class="form-check">
+			  						<input type="checkbox" class="form-check-input" checked="checked" value="{{account.id}}" name="boxes">
+			  					</div>
+			  				{% else %}
+			  					<div class="form-check">
+			  						<input type="checkbox" class="form-check-input"  value="{{account.id}}" name="boxes">
+			  					</div>
+			  				{% endif %}
+			  			</td>
+			  	{% endfor %}
+			  </tbody>
+			</table>
+			<br>
+			<button class="btn btn-outline-secondary btn-sm" type="submit">Update Approval</button>
+				
+		</form>
+	</div>
+{% endblock %}

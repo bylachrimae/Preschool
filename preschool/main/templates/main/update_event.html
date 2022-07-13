@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	<div class="container">
+		<h1>Update School Event</h1>
+		<br>
+		{% if user.is_manager or user.is_teacher %}
+			<form method="POST">
+				{% csrf_token %}
+				{{form.as_p}}
+				<button type="submit" value="Submit" class="btn btn-outline-secondary btn-sm">Submit</button>
+			</form>
+		{% else %}
+			<p>You Are Not Authorized To View This Page.</p>
+		{% endif %}
+	</div>
+{% endblock %}

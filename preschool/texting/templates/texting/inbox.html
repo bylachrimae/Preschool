@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	<div class="shadow p-4 mb-5 bg-body rounded container">
+		<h1>Inbox</h1>
+		<br>
+		<br>
+		{% if user_messages %}
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">From</th>
+						<th scope="col">Title</th>
+						<th scope="col">Content</th>
+						<th scope="col">View</th>
+						<th scope="col">Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for message in user_messages %}
+						<tr>
+							<th scope="row">{{message.sender}}</th>
+							<td>{{message.msg_title}}</td>
+							<td>{{message.msg_content|truncatechars:10}}</td>
+							<td><a href="{% url 'text-detail' message.id %}" type="submit" class="btn btn-outline-secondary btn-sm">View</a></td>
+							<td><a href="{% url 'delete-text' message.id %}" class="btn btn-outline-danger btn-sm">Delete</a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		{% else %}
+			<p>Your Inbox is Empty.</p>
+		{% endif %}
+	</div>
+
+{% endblock %}

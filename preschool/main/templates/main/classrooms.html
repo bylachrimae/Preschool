@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	<div class="container">
+		<h1>Classrooms</h1>
+		<br>
+		<br>
+		{% for classroom in classroom_list %}
+			<div class="card" style="width: 18rem;">
+			  <div class="card-body">
+			    <h5 class="card-title">CLASS {{classroom.classroom}}</h5>
+			    <p class="card-text">Teacher: {{classroom.attending_teacher.first_name|title}} {{classroom.attending_teacher.last_name|title}}</p>
+			    <p class="card-text">Class Size: {{classroom.attendingstudent.count}}</p>
+			    <a href="{% url 'view-class' classroom.id %}" class="btn btn-primary">View Class</a>
+			  </div>
+			</div>
+			<br>
+			<br>
+		{% endfor %}
+	</div>
+{% endblock %}

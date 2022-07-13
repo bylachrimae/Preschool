@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	<div class="container">
+		<div class="card" style="width: 18rem;">
+			<div class="card-body">
+				<h5 class="card-title">FROM: {{text.sender}}</h5>
+				<p class="card-text">TITLE: {{text.msg_title}}</p>
+				<p class="card-text">CONTENT: {{text.msg_content}}</p>
+				<br>
+				<a href="{% url 'inbox' %}" type="submit" class = "btn btn-outline-secondary btn-sm">Inbox</a><br>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

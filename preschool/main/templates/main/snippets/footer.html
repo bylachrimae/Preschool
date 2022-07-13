@@ -1,0 +1,22 @@
+{% load static %}
+<style type="text/css">
+  .footer{
+    min-height: 100px;
+  }
+</style>
+<!-- Footer -->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">&copy; 2022 Anippa, Inc</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="{% static 'logo.jpg' %}" height="75px;" width="75px;">
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="{% url 'classrooms' %}" class="nav-link px-2 text-muted">Classes</a></li>
+      <li class="nav-item"><a href="{% url 'event-list' %}" class="nav-link px-2 text-muted">Events</a></li>
+    </ul>
+    
+</footer>
+<!-- End Footer -->

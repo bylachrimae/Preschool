@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	<div class="shadow p-4 mb-5 bg-body rounded container">
+		<h1>Add Classroom To Database</h1>
+		<br>
+		<br>
+		{% if submitted %}
+			Your Class Was Submitted Successfully!
+		{% else %}
+			<form action="" method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" value="Submit" class="btn btn-secondary" name="">
+			</form>
+		{% endif %}
+	</div>
+
+{% endblock %}
