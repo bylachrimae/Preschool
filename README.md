@@ -31,7 +31,7 @@ Preschool is the answer to streamlining preschool management and fostering colla
 ![pta8](https://github.com/bylachrimae/Preschool/assets/103287671/edc16544-e239-47d6-90b7-7f2965b6dd25)
 ![pta7](https://github.com/bylachrimae/Preschool/assets/103287671/de1025c0-65c5-4632-aab8-18c66cf85f1e)
 ![pta6](https://github.com/bylachrimae/Preschool/assets/103287671/3b0a0629-8d22-45f5-95f9-08df9d4310f7)
-![pta5](https://github.com/bylachrimae/Preschool/assets/103287671/a6b3a008-da07-4f10-b68d-40a59ef8b7bb)
+![pta5](https://github.com/bylachrimae/Preschool/assets/103287671/b3a06330-d9d9-4546-a3a0-027fa0e1b036)
 ![pta4](https://github.com/bylachrimae/Preschool/assets/103287671/51f7cfea-d489-4bfb-95b8-dfecf00712c2)
 ![pta3](https://github.com/bylachrimae/Preschool/assets/103287671/c7cc7e2e-73fa-4f97-8931-6a218abd4640)
 ![pta2](https://github.com/bylachrimae/Preschool/assets/103287671/08014549-beb1-4e9e-9d6d-de4091bce97c)
